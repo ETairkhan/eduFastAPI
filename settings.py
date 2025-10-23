@@ -6,3 +6,9 @@ REAL_DATABASE_URL = env.str(
     "REAL_DATABASE_URL",
     default="postgresql+asyncpg://postgres:0000@localhost:5432/postgres",
 )  # connect string for the real database
+
+# test envs
+TEST_DATABASE_URL = env.str(
+    "TEST_DATABASE_URL",
+    default="postgresql+asyncpg://postgres_test:postgres_test@0.0.0.0:5433/postgres_test",
+)  # connect string for the test database
