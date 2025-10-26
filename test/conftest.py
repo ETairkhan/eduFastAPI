@@ -1,8 +1,12 @@
 import asyncio
+import sys
 import os
 from datetime import timedelta
 from typing import Any
-from typing import Generator
+from typing import Generator, AsyncGenerator
+
+# Add the project root to Python path
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import asyncpg
 import pytest
